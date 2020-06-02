@@ -1,28 +1,28 @@
-##Controle de gasto Python Django
+<h1>Controle de gasto Python Django</h1>
 
-Projeto controle de gastos com Python e Django.
+<h2>Projeto controle de gastos com Python e Django.</h2>
 
 ![file](https://i.imgur.com/SBW6YlN.png "file")
 
-Pastas criadas no desenvolvimento do projeto. 
+<h3>Pastas criadas no desenvolvimento do projeto. </h3>
 Venv - Virtualenv com Django instalado e db.sqlite3 
 
 	python -m venv venv
 
-Dentro da vm é instalado o Django com o comando:
+<h3>Dentro da vm é instalado o Django com o comando:</h3>
 
 	pip install django 
 
-Contas - App
+<h3>Contas - App</h3>
 
 	python manage.py startapp contas
 
-Controle_gastos - projeto Django, para cria-lo , devemos digitar: 
+<h3>Controle_gastos - projeto Django, para cria-lo , devemos digitar: </h3>
 
 	django-admin startproject controle_gastos
 
 
-db.sqlite3 - O django vem com o banco de dados SQLite 3, quando intalado ele carrega várias tabélas para serem utilizadas.
+<h3>db.sqlite3 - O django vem com o banco de dados SQLite 3, quando intalado ele carrega várias tabélas para serem utilizadas.</h3>
 
 	python manage.py migrate
 
