@@ -43,9 +43,6 @@ Documentação - migrations no Django
 ![makemigrations e migrate](https://i.imgur.com/2791IEf.png "makemigrations e migrate")
 	
 	python manage.py makemigrations
-	python manage.py migrate
-<<<<<<< HEAD
+	python manage.py migrate 
 	manage.py runserver  - > Inicia o server 
-=======
-	manage.py runserver  - > Inicia o server 
->>>>>>> 74355d11a837216e9e3d67a4ed080e255d661877
+
