@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from .models import Transacao
 
 # Create your views here.
 def home(requests):
 	data = {
-		'transasoes':['t1','t2','t3']
+		'trasacoes':['t1','t2','t3']
 	}
 	
 	#data_today = f'{datetime.now().day}/{datetime.now().month}/{datetime.now().year}'
@@ -17,3 +18,7 @@ def home(requests):
 	#html = '<html><body>Data e Hora atual %s</body></html>'% agora
 	return render(requests, 'contas/home.html',data)
 
+def listagem(requests):
+	dados = {}
+	trasacoes 
+	return render(requests,'contas/lista.html',dados)
