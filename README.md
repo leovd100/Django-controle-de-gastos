@@ -27,3 +27,21 @@ Venv - Virtualenv com Django instalado e db.sqlite3
 	python manage.py migrate
 
 
+Para acessar a aplicação após uma modificação no banco de dodos utiliza o
+comando migrations
+python manage.py migrate e makemigrations 
+	
+makemigrations - responsável por criar novas migrações.
+
+migrations - aplica as migrações.
+
+Documentação - migrations no Django 
+
+[Migrations - Django documentation ](http://https://docs.djangoproject.com/en/3.0/topics/migrations/ "Migrations - Django documentation ")
+
+
+![makemigrations e migrate](https://i.imgur.com/2791IEf.png "makemigrations e migrate")
+	
+	python manage.py makemigrations
+	python manage.py migrate
+	manage.py runserver  - > Inicia o server 
