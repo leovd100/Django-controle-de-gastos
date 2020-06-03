@@ -3,17 +3,42 @@
 <head>
 	<title>Pagina 1</title>
 	<meta charset="utf-8">
-	
+	<style type="text/css">
+		p{
+			position: absolute;
+			right: 2%;
+			top: 2%;
+		}
+
+		h1{
+			font-family: Arial;
+		}
+
+	</style>
 </head>
 <body>
 	<h1>Bem Vindo</h1>
-	<p>Data e Hora de hoje : {{agora}}</p>
-	}
-		
 
 
 
 
 
+	<p>Data e Hora de hoje : <em>{{agora}}</em></p>
+	
+	<ul>
+	
+		{% for transacao in transasoes %}
+			{% if transacao == 't3' %}
+				<li><b>{{transacao}}<b/></li>
+
+			{% else %}
+				<li>{{transacao}}</li>
+
+
+
+			{% endif %}
+
+		{% endfor %}
+	</ul>
 </body>
 </html>
