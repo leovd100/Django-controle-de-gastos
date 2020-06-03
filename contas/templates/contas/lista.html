@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina 2</title>
+	<meta charset="utf-8">
+</head>
+	<body>
+
+
+		{% for x in transacao %}
+
+			<ul>
+				<li>Nº {{x.numero}}</li>
+				<li>DESCRICAO : {{x.descricao}}</li>
+				<li>DATA : {{x.data}}</li>        
+				<li>VALOR : {{x.valor}} </li>
+				<li>CATEGORIA : {{x.categoria}}</li>
+			</ul>
+		{% endfor %}
+
+
+	</body>
+</html>

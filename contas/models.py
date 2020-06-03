@@ -1,5 +1,5 @@
 from django.db import models
-
+from random import randint
 # Create your models here.
 class Categoria(models.Model):
 	nome = models.CharField(max_length = 100)
@@ -8,7 +8,10 @@ class Categoria(models.Model):
 	def __str__(self):
 		return self.nome
 
+		
+
 class Transacao(models.Model):
+	numero = randint(0,9999)
 	data = models.DateTimeField()
 	descricao = models.CharField(max_length = 200)
 	valor = models.DecimalField(max_digits=7,decimal_places=2)
@@ -20,3 +23,4 @@ class Transacao(models.Model):
 
 	def __str__(self):
 		return self.descricao
+
