@@ -37,3 +37,25 @@ def newTransfer(requests):
 
 	data['form'] = formulario
 	return render(requests, 'contas/form.html',data)
+
+def update(requests, primary):
+	data = {}
+	transacao = Transacao.objects.get(pk=primary)
+	form = Constru_Form(requests.POST or None, instance=transacao)
+
+	if form.is_valid():
+		form.save()
+		return redirect('url_lista')
+
+
+	data['form'] = form
+	data['obj'] = transacao
+	return render(requests, 'contas/form.html',data)
+
+
+
+
+def delete(requests, pk):
+	transacao = Transacao.objects.get(pk=pk)
+	transacao.Delete()
+	return redirect('url_lista')

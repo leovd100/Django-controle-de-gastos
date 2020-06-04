@@ -11,6 +11,9 @@
 			{{ form.as_p }}
 
 			<button type="submit">Salvar</button> 
+			{% if obj %}
+				<button type="{% url 'delete_url' obj.id %}">Apagar</button> 
+			{% endif%}
 		</form>
 
 	</body>
