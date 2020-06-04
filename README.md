@@ -46,3 +46,6 @@ Documentação - migrations no Django
 	python manage.py migrate 
 	manage.py runserver  - > Inicia o server 
 
+<h3>Formulario feito em Django para captura de dados</h3>
+
+![formulario](https://i.imgur.com/MNzGVyl.png "formulario")
