@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import datetime
 from .models import Transacao
@@ -28,6 +28,12 @@ def listagem(requests):
 
 def newTransfer(requests):
 	data = {}
-	formulario = Constru_Form()
+	formulario = Constru_Form(requests.POST or None)
+
+	if formulario.is_valid():
+		formulario.save()
+		return redirect('url_lista')
+
+
 	data['form'] = formulario
 	return render(requests, 'contas/form.html',data)

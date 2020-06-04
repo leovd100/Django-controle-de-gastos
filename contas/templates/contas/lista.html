@@ -8,16 +8,12 @@
 
 
 		{% for x in transacao %}
-
 			<ul>
-				<li>Nº {{x.numero}}</li>
-				<li>DESCRICAO : {{x.descricao}}</li>
-				<li>DATA : {{x.data}}</li>        
-				<li>VALOR : {{x.valor}} </li>
-				<li>CATEGORIA : {{x.categoria}}</li>
+				 
+				</li>DESCRICAO : {{x.descricao}}	DATA : {{x.data}} CATEGORIA : {{x.categoria}}</li>
 			</ul>
 		{% endfor %}
-
+		<a href="{% url 'nova_url' %}">Voltar</a>
 
 	</body>
 </html>

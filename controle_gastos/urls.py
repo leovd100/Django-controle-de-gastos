@@ -21,8 +21,8 @@ from contas.views import home, listagem , newTransfer
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home),
-    path('form/',newTransfer),
-    path('listagem/',listagem)
+    path('form/',newTransfer,name='nova_url'),
+    path('listagem/',listagem,name='url_lista')
  
   
 ]
