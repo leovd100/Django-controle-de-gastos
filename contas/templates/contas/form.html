@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário</title>
+	<meta charset="utf-8">
+</head>
+	<body>
+		<form>
+			{% csrf_token %} <!--EVITA QUE ALGUEM ALTERE O FORMULÁRIO-->
+
+			{{ form }}
+
+
+		</form>
+
+	</body>
+</html>

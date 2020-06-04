@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from .models import Transacao
+from .forms import Constru_Form
+
+
 
 # Create your views here.
 def home(requests):
@@ -21,3 +24,10 @@ def listagem(requests):
 	data = {}
 	data['transacao'] = Transacao.objects.all()
 	return render(requests, 'contas/lista.html',data)
+
+
+def newTransfer(requests):
+	data = {}
+	formulario = Constru_Form()
+	data['form'] = formulario
+	return render(requests, 'contas/form.html',data)
