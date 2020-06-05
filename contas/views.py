@@ -7,7 +7,7 @@ from .forms import Constru_Form
 
 
 # Create your views here.
-def home(requests):
+def home(request):
 	data = {
 		'trasacoes':['t1','t2','t3']
 	}
@@ -16,19 +16,19 @@ def home(requests):
 	data['agora'] = datetime.now().strftime('%d/%m/%Y')
 
 	#html = '<html><body>Data e Hora atual %s</body></html>'% agora
-	return render(requests, 'contas/home.html',data)
+	return render(request, 'contas/home.html',data)
 
 
 
-def listagem(requests):
+def listagem(request):
 	data = {}
 	data['transacao'] = Transacao.objects.all()
-	return render(requests, 'contas/lista.html',data)
+	return render(request, 'contas/lista.html',data)
 
 
-def newTransfer(requests):
+def newTransfer(request):
 	data = {}
-	formulario = Constru_Form(requests.POST or None)
+	formulario = Constru_Form(request.POST or None)
 
 	if formulario.is_valid():
 		formulario.save()
@@ -36,12 +36,12 @@ def newTransfer(requests):
 
 
 	data['form'] = formulario
-	return render(requests, 'contas/form.html',data)
+	return render(request, 'contas/form.html',data)
 
-def update(requests, primary):
+def update(request, primary):
 	data = {}
 	transacao = Transacao.objects.get(pk=primary)
-	form = Constru_Form(requests.POST or None, instance=transacao)
+	form = Constru_Form(request.POST or None, instance=transacao)
 
 	if form.is_valid():
 		form.save()
@@ -50,12 +50,11 @@ def update(requests, primary):
 
 	data['form'] = form
 	data['obj'] = transacao
-	return render(requests, 'contas/form.html',data)
+	return render(request, 'contas/form.html',data)
 
 
 
-
-def delete(requests, pk):
-	transacao = Transacao.objects.get(pk=pk)
-	transacao.Delete()
+def delete(request, pk):
+	if form.is_valid():
+		Transacao.objects.get(pk=pk).delete()
 	return redirect('url_lista')
