@@ -12,33 +12,22 @@
 </head>
 <body>
  
- <header>
+ <header >
 
-	<img id='logo' src="{% static 'img/adg.png' %}">
+	<img id='logo' src="{% static 'img/adg.png ' %}">
  </header>
 
 
 
 	<p id='data'>Data e Hora de hoje : <em>{{agora}}</em></p>
 
-	
-	<ul>
-	
-		{% for transacao in trasacoes %}
-			{% if transacao == 't3' %}
-				<li><b>{{transacao}}<b/></li>
+	<div id = 'square'>
+			<div class = "botao">
+				<a id = 'formulario' href="{% url 'nova_url' %}">Formulário</a><br>
+				<a id = 'lista' href="{% url 'url_lista' %}">Lista</a>
+			</div>
 
-			{% else %}
-				<li>{{transacao}}</li>
-
-
-
-			{% endif %}
-
-		{% endfor %}
-	</ul>
-
-
+</div>
 	
 
 

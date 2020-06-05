@@ -49,3 +49,12 @@ Documentação - migrations no Django
 <h3>Formulario feito em Django para captura de dados</h3>
 
 ![formulario](https://i.imgur.com/MNzGVyl.png "formulario")
+
+<h4>Atualização:</h4>
+	Implementacão de CSS na página HOME
+![Djangocss](https://i.imgur.com/h0aAqDt.png "Djangocss")
+	
+Para usar CSS no Django, devemos criar uma pasta chamada Static onde dentro dela podemos manipular os arquivos CSS e JS.
+
+![PastaStatic](https://i.imgur.com/IVMJ8fF.png "PastaStatic")
+
