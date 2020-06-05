@@ -52,7 +52,9 @@ Documentação - migrations no Django
 
 <h4>Atualização:</h4>
 	Implementacão de CSS na página HOME
-![Djangocss](https://i.imgur.com/h0aAqDt.png "Djangocss")
+	
+![Djangocss](https://i.imgur.com/kog2LNY.png "Djangocss")
+
 	
 Para usar CSS no Django, devemos criar uma pasta chamada Static onde dentro dela podemos manipular os arquivos CSS e JS.
 
